@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "ArialDoc";
+  src: url("/System/Library/Fonts/Supplemental/Arial.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ArialDoc";
+  src: url("/System/Library/Fonts/Supplemental/Arial Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ArialDoc";
+  src: url("/System/Library/Fonts/Supplemental/Arial Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "ArialDoc";
+  src: url("/System/Library/Fonts/Supplemental/Arial Bold Italic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@page {
+  size: letter;
+  margin: 1in;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+  font-family: "ArialDoc", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 13.3pt;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0 0 8pt;
+  padding: 0;
+  text-align: center;
+  font-size: 13.35pt;
+  font-weight: 700;
+  line-height: 14.7pt;
+}
+
+.contact {
+  margin: 0 0 10pt;
+  text-align: center;
+  font-size: 10pt;
+  line-height: 13.3pt;
+  white-space: nowrap;
+}
+
+h2 {
+  margin: 14pt 0 8pt;
+  padding: 0 0 1.5pt;
+  font-size: 13.35pt;
+  font-weight: 700;
+  line-height: 14.7pt;
+  border-bottom: 0.75pt solid #000;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+  hyphens: none;
+}
+
+.job {
+  margin: 0 0 11pt;
+}
+
+.job-title {
+  margin: 0;
+  font-size: 11.35pt;
+  font-weight: 700;
+  line-height: 12.5pt;
+  text-align: left;
+}
+
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8pt;
+  margin: 0 0 5pt;
+  font-size: 10pt;
+  line-height: 13.3pt;
+}
+
+.job-meta .dates {
+  font-style: italic;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: right;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 18pt;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  text-indent: -12.5pt;
+  line-height: 13.3pt;
+}
+
+li::before {
+  content: "●  ";
+}
+
+.edu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8pt;
+  font-size: 11.35pt;
+  line-height: 12.5pt;
+  margin: 0 0 8pt;
+}
+
+.edu .degree {
+  font-size: 11.35pt;
+  font-style: italic;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.project {
+  margin: 0 0 9pt;
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8pt;
+  font-size: 10pt;
+  font-weight: 700;
+  line-height: 13.3pt;
+  margin: 0;
+}
+
+.project-head a {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.project .desc {
+  text-align: justify;
+  margin: 0;
+}
+
+.project .stack {
+  text-align: left;
+  margin: 0;
+}

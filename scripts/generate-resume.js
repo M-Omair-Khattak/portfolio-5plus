@@ -24,6 +24,7 @@ async function main() {
     fs.mkdirSync(path.dirname(job.out), { recursive: true });
     const page = await browser.newPage();
     await page.goto(`file://${job.html}`, { waitUntil: "load" });
+    await page.evaluate(() => document.fonts.ready);
     await page.pdf({
       path: job.out,
       format: "Letter",
