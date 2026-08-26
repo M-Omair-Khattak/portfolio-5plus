@@ -113,6 +113,28 @@ export const techStackItems: TechStackItem[] = [
   },
   { name: "Django", icon: SiDjango, color: "#092E20", monochrome: true },
   { name: "FastAPI", icon: SiFastapi, color: "#009688" },
+  {
+    name: "NestJS",
+    iconSrc: "/images/tech/nestjs.svg",
+    color: "#E0234E",
+  },
+  {
+    name: "TanStack",
+    iconSrc: "/images/tech/tanstack.svg",
+    color: "#000000",
+    monochrome: true,
+  },
+  {
+    name: "Playwright",
+    iconSrc: "/images/tech/playwright.svg",
+    color: "#2EAD33",
+  },
+  {
+    name: "Flask",
+    iconSrc: "/images/tech/flask.svg",
+    color: "#000000",
+    monochrome: true,
+  },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
   { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "Redis", icon: SiRedis, color: "#DC382D" },

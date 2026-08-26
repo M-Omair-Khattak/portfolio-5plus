@@ -9,6 +9,7 @@ import { MagneticButton } from "@/components/effects/magnetic-button";
 import { JelloText } from "@/components/effects/text-reveal";
 import { Button } from "@/components/ui/button";
 import { profile } from "@/data/profile";
+import { scrollToHash } from "@/lib/utils";
 
 const containerVariants = {
   hidden: {},
@@ -36,7 +37,7 @@ export function Hero() {
     >
       <AnimatedBackground />
 
-      <div className="container-max section-padding relative z-10 w-full py-12 md:py-20">
+      <div className="container-max section-padding z-10 w-full py-12 md:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <motion.div
             className="order-2 lg:order-1"
@@ -79,7 +80,13 @@ export function Hero() {
             <motion.div variants={itemVariants} className="mt-8 flex flex-wrap gap-3">
               <MagneticButton>
                 <Button asChild size="lg">
-                  <Link href="#projects">
+                  <Link
+                    href="#projects"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToHash("#projects");
+                    }}
+                  >
                     <FolderOpen className="mr-2 h-4 w-4" />
                     View Projects
                   </Link>
@@ -100,7 +107,13 @@ export function Hero() {
               </MagneticButton>
               <MagneticButton>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="#contact">
+                  <Link
+                    href="#contact"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToHash("#contact");
+                    }}
+                  >
                     <Mail className="mr-2 h-4 w-4" />
                     Contact
                   </Link>
@@ -145,20 +158,24 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block"
+          className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 md:block"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
         >
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-            <Link
+            <a
               href="#about"
               aria-label="Scroll to about section"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToHash("#about");
+              }}
               className="flex flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-accent"
             >
               <span className="text-xs uppercase tracking-widest">Scroll</span>
               <ArrowDown className="h-4 w-4" />
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>

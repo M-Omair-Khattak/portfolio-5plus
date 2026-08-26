@@ -1,8 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+
+/** Bump when replacing public/images/footer-avatar.png so browsers skip the old file */
+const AVATAR_SRC = "/images/footer-avatar.png?v=5";
 
 interface FooterAvatarProps {
   className?: string;
@@ -19,34 +21,23 @@ export function FooterAvatar({ className, size = "lg" }: FooterAvatarProps) {
   const pupilsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const pupilStartPoint = -10;
-    const pupilRangeX = 20;
-    const pupilRangeY = 15;
-    const mouseXEndPoint = window.innerWidth;
-    const mouseYEndPoint = window.innerHeight;
-
     function handleMouseMove(e: MouseEvent) {
-      const fracX = e.clientX / mouseXEndPoint;
-      const fracY = e.clientY / mouseYEndPoint;
-      const x = pupilStartPoint + fracX * pupilRangeX;
-      const y = pupilStartPoint + fracY * pupilRangeY;
-      const transform = `translate(${x}px, ${y}px)`;
+      const fracX = e.clientX / window.innerWidth;
+      const fracY = e.clientY / window.innerHeight;
 
       pupilsRef.current.forEach((pupil) => {
-        if (pupil) pupil.style.transform = transform;
+        if (!pupil) return;
+        const eye = pupil.parentElement;
+        if (!eye) return;
+        const { width, height } = eye.getBoundingClientRect();
+        const x = (fracX - 0.5) * width * 0.28;
+        const y = (fracY - 0.5) * height * 0.22;
+        pupil.style.transform = `translate(${x}px, ${y}px)`;
       });
     }
 
-    function handleResize() {
-      /* ranges stay window-based like reference main.js */
-    }
-
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   return (
@@ -57,13 +48,14 @@ export function FooterAvatar({ className, size = "lg" }: FooterAvatarProps) {
         className
       )}
     >
-      <Image
-        src="/images/footer-avatar.png"
+      {/* Native img so a query-string cache bust is allowed (next/image blocks it). */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={AVATAR_SRC}
         alt="Animated avatar"
         width={400}
         height={400}
         className="footer-avatar-img h-auto w-full select-none"
-        priority
         draggable={false}
       />
       <div className="footer-avatar-face" aria-hidden="true">
@@ -72,7 +64,7 @@ export function FooterAvatar({ className, size = "lg" }: FooterAvatarProps) {
             ref={(el) => {
               pupilsRef.current[0] = el;
             }}
-            className="footer-pupil"
+            className="footer-pupil !w-[40%]"
           />
         </div>
         <div className="footer-avatar-eye footer-right-eye">
@@ -80,7 +72,7 @@ export function FooterAvatar({ className, size = "lg" }: FooterAvatarProps) {
             ref={(el) => {
               pupilsRef.current[1] = el;
             }}
-            className="footer-pupil"
+            className="footer-pupil !w-[40%]"
           />
         </div>
       </div>

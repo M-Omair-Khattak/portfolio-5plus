@@ -136,7 +136,7 @@ html:not(.dark) .cursor-outer {
   height: 50px;
 }
 
-/* Footer avatar — exact match to reference portfolio */
+/* Hero avatar — Mateen-style eyeballs behind the sockets */
 .footer-avatar-container {
   position: relative;
   display: flex;
@@ -152,60 +152,63 @@ html:not(.dark) .cursor-outer {
 
 .footer-avatar-face {
   position: absolute;
-  width: 100%;
-  height: 97%;
+  inset: 0;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8.182%;
-  padding-left: 2.273%;
   pointer-events: none;
 }
 
 .footer-avatar-eye {
-  width: 22.727%;
+  position: absolute;
+  width: 18%;
   aspect-ratio: 1;
-  flex-shrink: 0;
-  background-color: #dfd2d2;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  overflow: hidden;
+  background-color: #dfd2d2;
 }
 
 .footer-left-eye {
-  box-shadow: -10px -15px 5px rgba(0, 0, 0, 0.349) inset;
+  left: 28.48%;
+  top: 37.92%;
+  box-shadow:
+    inset 3px 4px 8px rgba(0, 0, 0, 0.28),
+    inset -4px -3px 6px rgba(255, 255, 255, 0.18),
+    -8px -12px 5px rgba(0, 0, 0, 0.22) inset;
 }
 
 .footer-right-eye {
-  box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.233) inset,
-    10px 10px 5px rgba(41, 33, 33, 0.644) inset;
+  left: 55.99%;
+  top: 37.37%;
+  box-shadow:
+    inset -2px 4px 8px rgba(0, 0, 0, 0.3),
+    10px 10px 5px rgba(41, 33, 33, 0.45) inset;
 }
 
 .footer-pupil {
+  position: relative;
   width: 40%;
   aspect-ratio: 1;
   background-color: #000;
   border-radius: 50%;
   border: 5px solid #413333;
-  filter: blur(0.6px);
+  filter: blur(0.5px);
   will-change: transform;
 }
 
-.footer-avatar-eye::before {
+.footer-pupil::before {
   position: absolute;
   content: "";
-  width: 2px;
-  height: 5px;
+  width: 22%;
+  height: 38%;
   border-radius: 50%;
-  background-color: rgba(214, 214, 214, 0.726);
+  background-color: rgba(255, 255, 255, 0.82);
   z-index: 2;
-  filter: blur(0.2px);
-  left: 30%;
-  top: 18%;
-  transform: rotate(45deg);
+  filter: blur(0.25px);
+  left: 8%;
+  top: 14%;
+  transform: rotate(42deg);
 }
 
 ::selection {

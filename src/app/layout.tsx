@@ -27,6 +27,13 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   authors: [{ name: profile.name }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png?v=5", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: `${profile.name} | ${profile.title}`,
     description: profile.tagline,

@@ -44,11 +44,18 @@ interface JelloTextProps {
 }
 
 export function JelloText({ children, className }: JelloTextProps) {
+  const words = children.split(" ");
+
   return (
     <span className={cn("jello-name", className)}>
-      {children.split("").map((char, i) => (
-        <span key={`${char}-${i}`} className="jello">
-          {char === " " ? "\u00A0" : char}
+      {words.map((word, wordIndex) => (
+        <span key={`${word}-${wordIndex}`} className="inline-flex">
+          {word.split("").map((char, i) => (
+            <span key={`${wordIndex}-${char}-${i}`} className="jello">
+              {char}
+            </span>
+          ))}
+          {wordIndex < words.length - 1 ? <span className="jello">&nbsp;</span> : null}
         </span>
       ))}
     </span>

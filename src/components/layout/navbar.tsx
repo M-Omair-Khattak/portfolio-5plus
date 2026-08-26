@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, scrollToHash } from "@/lib/utils";
 import { profile } from "@/data/profile";
 
 const navLinks = [
@@ -65,11 +65,10 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
         >
           <Link
             href="#"
-            className="text-lg font-bold tracking-tight transition-opacity hover:opacity-80"
+            className="text-base font-bold tracking-tight transition-opacity hover:opacity-80 sm:text-lg"
             onClick={() => setMobileOpen(false)}
           >
-            <span className="gradient-text">{profile.name.split(" ")[0]}</span>
-            <span className="text-muted-foreground">.</span>
+            <span className="gradient-text">{profile.name}</span>
           </Link>
 
           {/* Desktop nav */}
@@ -78,6 +77,10 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToHash(link.href);
+                }}
                 className={cn(
                   "relative px-4 py-2 text-sm font-medium transition-colors",
                   activeSection === link.href.slice(1)
@@ -151,7 +154,11 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
                 >
                   <Link
                     href={link.href}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setMobileOpen(false);
+                      scrollToHash(link.href);
+                    }}
                     className={cn(
                       "block rounded-xl px-4 py-3 text-lg font-medium transition-colors",
                       activeSection === link.href.slice(1)

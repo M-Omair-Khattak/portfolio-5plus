@@ -84,7 +84,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="section-padding relative overflow-hidden py-20 md:py-28"
+      className="section-padding relative overflow-hidden scroll-mt-20 py-20 md:py-28"
       aria-label="About section"
     >
       <div
@@ -104,15 +104,15 @@ export function About() {
         <SectionHeader
           className="mt-12 md:mt-16"
           label="About"
-          title="The work, not the pitch"
-          description="Client apps, production deploys, the unglamorous jobs in between."
+          title="Engineering with intent"
+          description="From architecture to deployment — I build systems that scale, ship fast, and hold up in production."
         />
 
         <FadeIn>
           <blockquote className="border-l-2 border-accent pl-5 text-xl font-medium leading-snug tracking-tight sm:text-2xl">
-            I would rather ship a{" "}
-            <span className="gradient-text">boring working app</span>{" "}
-            than a demo that falls over on Monday.
+            I turn complex problems into{" "}
+            <span className="gradient-text">clean, reliable software</span>{" "}
+            — full stack, cloud-native, and AI-assisted.
           </blockquote>
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">

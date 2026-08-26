@@ -1,10 +1,18 @@
+export interface ExperienceWork {
+  name: string;
+  summary: string;
+}
+
 export interface Experience {
   id: string;
   company: string;
   position: string;
   duration: string;
   location?: string;
+  current?: boolean;
   description?: string;
+  stack: string[];
+  work: ExperienceWork[];
   responsibilities: string[];
   achievements: string[];
 }
@@ -16,23 +24,69 @@ export const experiences: Experience[] = [
     position: "Full Stack Engineer",
     duration: "Oct 2025 — Present",
     location: "Lahore, Pakistan",
+    current: true,
     description:
-      "Small team, a lot of client work. I take a product from first ticket through staging and usually production.",
+      "End-to-end product delivery for construction, healthcare, and automotive teams — from first ticket through staging and production.",
+    stack: [
+      "Django",
+      "DRF",
+      "NestJS",
+      "TanStack",
+      "Next.js",
+      "Playwright",
+      "AWS",
+      "Stripe",
+    ],
+    work: [
+      {
+        name: "Antis",
+        summary: "Attendance and labor costing for construction crews, with Excel and PDF exports.",
+      },
+      {
+        name: "Keeley Construction",
+        summary: "Procore field reports, a billing/draw tracker, and a Claude MCP for job financials.",
+      },
+      {
+        name: "United Rehab",
+        summary: "Inbound fax OCR, patient intake, insurance extraction, and RingCentral for the fax line.",
+      },
+      {
+        name: "Automotive Strategies",
+        summary: "Playwright jobs that log into Toyota/LEO, buy ZIP-segmented lists, and export them for dealers.",
+      },
+      {
+        name: "Park-and-Tow",
+        summary: "Retell voice dashboard, RingCentral call sync and recordings, and Omadi listing scrape.",
+      },
+      {
+        name: "LessonLoop",
+        summary: "K-12 educator portal for lesson planning and class surveys.",
+      },
+      {
+        name: "CNTNDR",
+        summary: "White-label fitness app with video and Stripe billing.",
+      },
+      {
+        name: "Everon CRM",
+        summary: "Dealer CRM for call, SMS, and email campaigns.",
+      },
+      {
+        name: "ABS Tender Scanner",
+        summary: "Scanner for Pakistan government tenders.",
+      },
+      {
+        name: "Ubiquify Website",
+        summary: "Company marketing site.",
+      },
+    ],
     responsibilities: [
       "Build and maintain client apps end to end — Django/DRF or Nest on the backend, TanStack or Next.js on the frontend.",
-      "Antis: attendance and labor costing for construction crews, plus Excel/PDF exports the office actually uses.",
-      "Keeley Construction: Procore field reports, a billing/draw tracker, and a Claude MCP so people can ask about job financials without opening five tabs.",
-      "United Rehab: inbound fax OCR, patient intake, insurance extraction, RingCentral for the fax line.",
-      "Automotive Strategies: Playwright jobs that log into Toyota/LEO, buy ZIP-segmented marketing lists, and dump them for dealers.",
-      "Park-and-Tow: Retell voice dashboard, RingCentral call sync and recordings, Omadi listing scrape.",
-      "LessonLoop: K-12 educator portal for lesson planning and class surveys. CNTNDR: white-label fitness app with video and Stripe billing. Everon: dealer CRM for call, SMS, and email campaigns.",
-      "Also a scanner for Pakistan government tenders and the company marketing site.",
-      "Owned features from first ticket through production, including staging deploys, client demos, and post-launch fixes.",
+      "Own features from first ticket through production, including staging deploys, client demos, and post-launch fixes.",
     ],
     achievements: [
-      "Stood up several client apps from empty repo to something staff use daily.",
+      "Stood up several client apps from empty repo to tools staff use daily.",
       "Cut a lot of manual fax handling at United Rehab by parsing referrals instead of typing them.",
-      "Took dealer list exports off a click-through-the-portal routine and onto a scheduled job.",
+      "Took dealer list exports off a click-through portal routine and onto a scheduled job.",
     ],
   },
   {
@@ -42,16 +96,61 @@ export const experiences: Experience[] = [
     duration: "Aug 2021 — Oct 2025",
     location: "Lahore, Pakistan",
     description:
-      "Full-time on client products. Django/DRF backends, React and Next.js frontends, the usual production mess.",
+      "Client platforms in healthcare, PropTech, auctions, and AI — Django REST backends, React and Next.js frontends, CI/CD, and long-running production support.",
+    stack: [
+      "Django",
+      "DRF",
+      "Flask",
+      "React",
+      "Next.js",
+      "Redux Toolkit",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+    ],
+    work: [
+      {
+        name: "Equiem",
+        summary: "PropTech platform for commercial buildings, tenant apps, and operations dashboards.",
+      },
+      {
+        name: "Fitnescity",
+        summary: "Health testing marketplace — search, maps, calendar, and Stripe booking.",
+      },
+      {
+        name: "Hippocratic AI",
+        summary: "Healthcare AI marketing and product site on Next.js and Strapi.",
+      },
+      {
+        name: "FT Technologies",
+        summary: "Industrial IoT marketing site and catalog work.",
+      },
+      {
+        name: "Invaluable",
+        summary: "Auction marketplace features for live bidding and catalog workflows.",
+      },
+      {
+        name: "Maisonette",
+        summary: "Premium e-commerce storefront and checkout flows.",
+      },
+      {
+        name: "Atomic Asher",
+        summary: "Creative studio website and content experience.",
+      },
+      {
+        name: "AXOCEAN",
+        summary: "Affiliate e-commerce storefront.",
+      },
+    ],
     responsibilities: [
       "Shipped production web apps with Django, Django REST Framework, React, and Next.js.",
-      "Wrote REST APIs and smaller services in Django and Flask — JWT, Postgres, nothing clever for its own sake.",
-      "Built UI with React, Redux Toolkit, Tailwind, and Next.js routing. Made it work on a phone.",
+      "Designed REST APIs and smaller services in Django and Flask — JWT, Postgres, and pragmatic architecture.",
+      "Built UI with React, Redux Toolkit, Tailwind, and Next.js routing, including mobile-ready layouts.",
       "Set up GitHub Actions and GitLab CI so tests and deploys were not a Friday-night ritual.",
       "Wrote pytest and Postman suites so regressions showed up before a client did.",
-      "Sat with interns and juniors on PRs, pair sessions, and the kind of notes people actually read.",
-      "Touched Hyperledger Fabric on an access-control prototype — not my whole job, but I know my way around the network YAML.",
-      "Supported production releases for long-running clients, including bug fixes, performance work, and handoff to newer teammates.",
+      "Mentored interns and juniors on PRs, pair sessions, and review notes people actually used.",
+      "Touched Hyperledger Fabric on an access-control prototype — not the whole job, but I know the network YAML.",
+      "Supported production releases for long-running clients, including bug fixes, performance work, and handoff.",
     ],
     achievements: [
       "Stayed on the same clients long enough to own features, not just tickets: Fitnescity, Equiem, FT Technologies, Hippocratic AI, Invaluable, and others.",
