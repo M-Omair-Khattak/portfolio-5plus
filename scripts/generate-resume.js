@@ -26,9 +26,10 @@ async function main() {
     await page.goto(`file://${job.html}`, { waitUntil: "load" });
     await page.pdf({
       path: job.out,
-      format: "A4",
+      format: "Letter",
       printBackground: true,
-      margin: { top: "12mm", bottom: "12mm", left: "14mm", right: "14mm" },
+      preferCSSPageSize: true,
+      margin: { top: "0", bottom: "0", left: "0", right: "0" },
     });
     console.log("wrote", job.out);
     await page.close();
