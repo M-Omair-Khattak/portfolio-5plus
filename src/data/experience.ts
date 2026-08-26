@@ -25,7 +25,9 @@ export const experiences: Experience[] = [
       "United Rehab: inbound fax OCR, patient intake, insurance extraction, RingCentral for the fax line.",
       "Automotive Strategies: Playwright jobs that log into Toyota/LEO, buy ZIP-segmented marketing lists, and dump them for dealers.",
       "Park-and-Tow: Retell voice dashboard, RingCentral call sync and recordings, Omadi listing scrape.",
-      "Also LessonLoop, CNTNDR, Everon CRM, RCS, Mobile Expert, Design Democracy, ABS tender scanner, and the Ubiquify marketing site.",
+      "LessonLoop: K-12 educator portal for lesson planning and class surveys. CNTNDR: white-label fitness app with video and Stripe billing. Everon: dealer CRM for call, SMS, and email campaigns.",
+      "Also a street-video analysis tool (RCS), a T-Mobile plan Q&A prototype, Design Democracy for workplace layout voting, a Pakistan government tender scanner, and the company marketing site.",
+      "Owned features from first ticket through production, including staging deploys, client demos, and post-launch fixes.",
     ],
     achievements: [
       "Stood up several client apps from empty repo to something staff use daily.",
@@ -49,6 +51,7 @@ export const experiences: Experience[] = [
       "Wrote pytest and Postman suites so regressions showed up before a client did.",
       "Sat with interns and juniors on PRs, pair sessions, and the kind of notes people actually read.",
       "Touched Hyperledger Fabric on an access-control prototype — not my whole job, but I know my way around the network YAML.",
+      "Supported production releases for long-running clients, including bug fixes, performance work, and handoff to newer teammates.",
     ],
     achievements: [
       "Stayed on the same clients long enough to own features, not just tickets: Fitnescity, Equiem, FT Technologies, Hippocratic AI, Invaluable, and others.",
