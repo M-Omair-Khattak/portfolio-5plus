@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const jobs = [
   {
-    html: path.join(__dirname, "resume-5plus.html"),
+    html: path.join(__dirname, "resume-5plus-v2.html"),
     out: path.join(__dirname, "../public/resume/Muhammad_Omair_Resume.pdf"),
   },
 ];
@@ -13,22 +13,8 @@ const extra = process.argv[2];
 if (extra === "3plus") {
   jobs.length = 0;
   jobs.push({
-    html: path.join(__dirname, "resume-3plus.html"),
-    out: path.join(__dirname, "../public/resume/Muhammad_Omair_Resume.pdf"),
-  });
-}
-if (extra === "v2") {
-  jobs.length = 0;
-  jobs.push({
-    html: path.join(__dirname, "resume-5plus-v2.html"),
-    out: path.join(__dirname, "../public/resume/Muhammad_Omair_Resume_v2.pdf"),
-  });
-}
-if (extra === "v2-3plus") {
-  jobs.length = 0;
-  jobs.push({
     html: path.join(__dirname, "resume-3plus-v2.html"),
-    out: path.join(__dirname, "../public/resume/Muhammad_Omair_Resume_v2.pdf"),
+    out: path.join(__dirname, "../public/resume/Muhammad_Omair_Resume.pdf"),
   });
 }
 
