@@ -84,35 +84,26 @@ export function About() {
   return (
     <section
       id="about"
-      className="section-padding relative overflow-hidden scroll-mt-20 py-20 md:py-28"
+      className="section-padding relative scroll-mt-20 py-10 md:py-12"
       aria-label="About section"
     >
-      <div
-        className="pointer-events-none absolute -right-32 top-20 h-72 w-72 rounded-full bg-accent/10 blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-accent-secondary/10 blur-3xl"
-        aria-hidden="true"
-      />
-
       <div className="container-max relative">
         <FadeIn>
           <ProfileCard />
         </FadeIn>
 
         <SectionHeader
-          className="mt-12 md:mt-16"
+          className="mt-10 md:mt-12"
           label="About"
           title="Engineering with intent"
-          description="From architecture to deployment — I build systems that scale, ship fast, and hold up in production."
+          description="From architecture to deployment, I build systems that scale, ship fast, and hold up in production."
         />
 
         <FadeIn>
           <blockquote className="border-l-2 border-accent pl-5 text-xl font-medium leading-snug tracking-tight sm:text-2xl">
             I turn complex problems into{" "}
-            <span className="gradient-text">clean, reliable software</span>{" "}
-            — full stack, cloud-native, and AI-assisted.
+            <span className="gradient-text">clean, reliable software</span>,{" "}
+            full stack, cloud-native, and AI-assisted.
           </blockquote>
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">

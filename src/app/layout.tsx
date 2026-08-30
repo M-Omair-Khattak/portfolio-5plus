@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: `${profile.name} | ${profile.title}`,
-  description: `${profile.name} — ${profile.title} with ${profile.yearsExperience} years on Django, React, and Next.js. Client work in healthcare, construction, and e-commerce.`,
+  description: `${profile.name}, ${profile.title} with ${profile.yearsExperience} years on Django, React, and Next.js. Client work in healthcare, construction, and e-commerce.`,
   keywords: [
     "Muhammad Omair",
     "Full Stack Engineer",

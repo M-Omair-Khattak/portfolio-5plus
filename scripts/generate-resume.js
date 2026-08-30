@@ -17,6 +17,20 @@ if (extra === "3plus") {
     out: path.join(__dirname, "../public/resume/Muhammad_Omair_Resume.pdf"),
   });
 }
+if (extra === "v2") {
+  jobs.length = 0;
+  jobs.push({
+    html: path.join(__dirname, "resume-5plus-v2.html"),
+    out: path.join(__dirname, "../public/resume/Muhammad_Omair_Resume_v2.pdf"),
+  });
+}
+if (extra === "v2-3plus") {
+  jobs.length = 0;
+  jobs.push({
+    html: path.join(__dirname, "resume-3plus-v2.html"),
+    out: path.join(__dirname, "../public/resume/Muhammad_Omair_Resume_v2.pdf"),
+  });
+}
 
 async function main() {
   const browser = await chromium.launch({ headless: true });

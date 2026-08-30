@@ -12,7 +12,7 @@ function RoleCard({ exp, index }: { exp: ExperienceItem; index: number }) {
   return (
     <article
       className={cn(
-        "relative overflow-hidden rounded-3xl",
+        "relative overflow-hidden rounded-3xl shadow-[var(--card-shadow)]",
         exp.current ? "gradient-border" : "border border-border"
       )}
     >
@@ -132,23 +132,14 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="section-padding relative overflow-hidden scroll-mt-20 py-20 md:py-28"
+      className="section-padding relative scroll-mt-20 py-10 md:py-12"
       aria-label="Experience section"
     >
-      <div
-        className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-accent/10 blur-3xl"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-accent-secondary/10 blur-3xl"
-        aria-hidden
-      />
-
       <div className="container-max relative">
         <SectionHeader
           label="Experience"
           title="Career path"
-          description="Production systems for healthcare, PropTech, construction, and operations teams — designed, shipped, and kept running."
+          description="Production systems for healthcare, PropTech, construction, and operations teams, designed, shipped, and kept running."
         />
 
         <div className="relative mx-auto max-w-5xl">

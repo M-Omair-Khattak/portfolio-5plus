@@ -17,7 +17,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="border-t border-border bg-muted/30">
+    <footer className="relative z-[1] border-t border-border/70 bg-background/30 backdrop-blur-md">
       <div className="container-max section-padding py-12">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="text-center sm:text-left">

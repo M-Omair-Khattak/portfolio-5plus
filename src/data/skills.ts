@@ -38,7 +38,7 @@ export interface TechStackItem {
   icon?: IconType;
   iconSrc?: string;
   color: string;
-  /** Icon uses foreground color — adapts to light/dark theme (for black/white logos) */
+  /** Icon uses foreground color, adapts to light/dark theme (for black/white logos) */
   monochrome?: boolean;
 }
 

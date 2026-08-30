@@ -7,6 +7,7 @@ import {
   User,
   Code2,
   FolderOpen,
+  GitBranch,
   Mail,
   ExternalLink,
   FileDown,
@@ -89,6 +90,7 @@ export function CommandPalette({ open, onOpenChange }: CommandPaletteProps) {
                     { href: "#about", label: "About", icon: User },
                     { href: "#experience", label: "Experience", icon: Briefcase },
                     { href: "#skills", label: "Skills", icon: Code2 },
+                    { href: "#github", label: "GitHub", icon: GitBranch },
                     { href: "#projects", label: "Projects", icon: FolderOpen },
                     { href: "#contact", label: "Contact", icon: Mail },
                   ].map(({ href, label, icon: Icon }) => (

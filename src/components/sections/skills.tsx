@@ -11,7 +11,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="section-padding py-16 md:py-24"
+      className="section-padding scroll-mt-20 py-10 md:py-12"
       aria-label="Skills section"
     >
       <div className="container-max">

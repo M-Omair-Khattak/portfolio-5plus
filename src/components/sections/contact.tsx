@@ -67,7 +67,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="section-padding py-20 md:py-28"
+      className="section-padding scroll-mt-20 py-10 md:py-12"
       aria-label="Contact section"
     >
       <div className="container-max">

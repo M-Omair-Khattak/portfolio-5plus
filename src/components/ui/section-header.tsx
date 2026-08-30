@@ -19,7 +19,7 @@ export function SectionHeader({
   align = "left",
 }: SectionHeaderProps) {
   return (
-    <FadeIn className={cn("mb-12 md:mb-16", align === "center" && "text-center", className)}>
+    <FadeIn className={cn("mb-8 md:mb-10", align === "center" && "text-center", className)}>
       <p className="mb-3 text-sm font-medium uppercase tracking-widest text-accent">
         {label}
       </p>

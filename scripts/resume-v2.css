@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "CalibriDoc";
+  src: url("./fonts/Carlito-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CalibriDoc";
+  src: url("./fonts/Carlito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CalibriDoc";
+  src: url("./fonts/Carlito-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CalibriDoc";
+  src: url("./fonts/Carlito-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@page {
+  size: letter;
+  margin: 0.5in 0.6in 0.45in 0.6in;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+  font-family: "CalibriDoc", Calibri, "Carlito", Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.28;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #1155cc;
+  text-decoration: underline;
+}
+
+.header {
+  margin: 0 0 10pt;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.4pt;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 2pt 0 3pt;
+  font-size: 12pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.contact {
+  margin: 0;
+  font-size: 10.5pt;
+  line-height: 1.25;
+}
+
+.contact .sep {
+  padding: 0 4pt;
+}
+
+h2 {
+  margin: 11pt 0 5pt;
+  padding: 0 0 1.5pt;
+  font-size: 12pt;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.3pt;
+  text-transform: uppercase;
+  border-bottom: 0.9pt solid #000;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+  hyphens: none;
+}
+
+.job {
+  margin: 0 0 8pt;
+}
+
+.job-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10pt;
+  margin: 0;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.job-line .dates {
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.company {
+  margin: 0 0 2pt;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 16pt;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  text-indent: -12pt;
+  line-height: 1.28;
+}
+
+li::before {
+  content: "●  ";
+}
+
+.skill-row {
+  margin: 0 0 2pt;
+  text-align: left;
+}
+
+.edu-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10pt;
+  margin: 0;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.edu-school {
+  margin: 0;
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.project {
+  margin: 0 0 7pt;
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10pt;
+  margin: 0;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.project-head a {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.project .desc,
+.project .stack {
+  margin: 0;
+  text-align: justify;
+}
